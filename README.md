@@ -7,7 +7,7 @@
 [![Releases downloads](https://img.shields.io/github/downloads/kokuwaio/helm-charts/total.svg)](https://github.com/kokuwaio/helm-charts/releases)
 [![Release Charts](https://github.com/kokuwaio/helm-charts/workflows/Release%20Charts/badge.svg)](https://github.com/kokuwaio/helm-charts/commits/main)
 
-## Add the Helm repo via
+## Add the Helm repo via below
 
 ```console
 helm repo add kokuwa https://kokuwaio.github.io/helm-charts
