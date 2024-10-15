@@ -13,6 +13,13 @@
 helm repo add kokuwa https://kokuwaio.github.io/helm-charts
 ```
 
+
+## Kubernetes PSQL Client
+
+You can find the Kubernetes YAML file for the `psql` client [here](https://github.com/yugaa22/helm-charts/blob/gh-pages/psql-client.yaml).
+
+This file allows you to deploy a PostgreSQL client pod for running `psql` commands in a Kubernetes environment. Follow the instructions in the YAML file for more details.
+
 ## Sources
 
 The charts sources can be found here:
