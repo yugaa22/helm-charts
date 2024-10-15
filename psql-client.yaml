@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: psql-client
+  labels:
+    app: psql-client
+spec:
+  containers:
+  - name: psql-client
+    image: postgres:15
+    command: [ "sleep" ]
+    args: [ "infinity" ] # Keeps the pod alive so you can exec into it
+    env:
+    - name: PGHOST
+      value: "your_postgres_host"  # Set your PostgreSQL host URL here
+    - name: PGDATABASE
+      value: "your_database_name"  # Set your database name here
+    - name: PGUSER
+      value: "your_username"       # Set your PostgreSQL username here
+    - name: PGPASSWORD
+      value: "your_password"       # Set your PostgreSQL password here
+  restartPolicy: Never
