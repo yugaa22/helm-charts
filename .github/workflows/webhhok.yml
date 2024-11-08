@@ -1,0 +1,20 @@
+name: Trigger Webhook
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main  # Adjust this to any branch you want to monitor for pushes
+
+jobs:
+  trigger_webhook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send webhook notification
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}  # Set this as a secret in GitHub repository settings
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{"event": "GitHub Action Triggered"}' "$WEBHOOK_URL"
+
+          #curl -X POST -H "Content-type: application/json" https://isd.alpha.autopilot.opsmx.com/gate/webhooks/webhook/opsmx
